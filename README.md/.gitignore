@@ -1,0 +1,15 @@
+# SASS and CSS Maps
+.sass-cache/
+*.css.map
+*.scss.map
+
+# Operating System files
+Thumbs.db
+.DS_Store
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
