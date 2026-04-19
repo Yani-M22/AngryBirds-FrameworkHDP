@@ -1,0 +1,28 @@
+// 1. ABSTRACTS (Herramientas)
+@use 'abstracts/variables' as *;
+//@use 'abstracts/mixins' as *;
+//@use 'abstracts/functions';
+
+// 2. BASE (Estilos globales)
+//@use 'base/reset';
+
+// 3. LAYOUT (Estructura de la página)
+//@use 'layout/container';
+//@use 'layout/grid';
+
+// 4. COMPONENTS (Elementos de UI)
+//@use 'components/buttons';
+//@use 'components/cards';
+//@use 'components/navbar';
+//@use 'components/alerts';
+//@use 'components/forms';
+//@use 'components/badges';
+//@use 'components/tables';
+
+// 5. UTILITIES (Clases de un solo propósito - Las que tú creaste)
+//@use 'utilities/typography';
+//@use 'utilities/display';
+//@use 'utilities/spacing';
+@use 'utilities/colors';
+//@use 'utilities/flex';
+//@use 'utilities/others';

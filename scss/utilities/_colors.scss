@@ -13,6 +13,7 @@
     .bg-#{$name}{
         background-color: $color !important;
 
+        //Valida que si el color es oscuro, el texto hijo será claro
         @if $name == "dark" or $name == "danger" or $name == "success"{
             color: $snow-white;
         }
