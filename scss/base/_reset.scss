@@ -1,0 +1,36 @@
+// Reseteo Global
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // Obliga al navegador a incluir padding dentro del ancho
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; // Base para cálculos rem/em
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; // Garantía final contra el scroll horizontal
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // O la que prefieras para tu tema
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
