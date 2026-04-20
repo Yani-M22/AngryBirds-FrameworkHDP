@@ -4,11 +4,11 @@
 //@use 'abstracts/functions';
 
 // 2. BASE (Estilos globales)
-//@use 'base/reset';
+@use 'base/reset';
 
 // 3. LAYOUT (Estructura de la página)
 @use '../scss/layout/container';
-//@use 'layout/grid';
+@use 'layout/grid';
 
 // 4. COMPONENTS (Elementos de UI)
 //@use 'components/buttons';

@@ -1,0 +1,44 @@
+@use "sass:map";
+@use '../abstracts/variables' as *;
+
+// --- MODELO DE FILAS ---
+// La fila anula los paddings laterales del contenedor para alinear las columnas.
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc($gutter-width * -1);
+  margin-left: calc($gutter-width * -1);
+}
+
+// --- SISTEMA DE 12 COLUMNAS (Mobile First) ---
+// Generamos las clases base .col-1 a .col-12 que aplican desde móviles.
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: calc(100% / 12 * #{$i});
+    padding-right: $gutter-width;
+    padding-left: $gutter-width;
+  }
+}
+
+// --- SOPORTE RESPONSIVO (Breakpoints) ---
+// Usamos el mapa $breakpoints definido en variables para generar clases md y lg.
+
+// Tablet (md)
+@media (min-width: map.get($breakpoints, md)) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+// Escritorio (lg)
+@media (min-width: map.get($breakpoints, lg)) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+}

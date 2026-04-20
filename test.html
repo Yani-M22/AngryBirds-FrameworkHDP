@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Test de Estrés - God of War Framework</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Estilos temporales solo para visualizar las pruebas */
+        .test-box {
+            background-color: #8b0000; /* Rojo Kratos */
+            color: white;
+            border: 1px solid white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        section { margin-bottom: 50px; border-bottom: 2px solid #ccc; padding-bottom: 20px; }
+        h2 { color: #333; font-family: sans-serif; }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>Prueba 1: Contenedores (Requisito 2.2)</h2>
+        <div class="container test-box">Soy un .container (Fijo en pantallas grandes)</div>
+        <div class="container-fluid test-box">Soy un .container-fluid (Siempre 100%)</div>
+        <div class="container-md test-box">Soy .container-md (Fluido hasta 768px)</div>
+    </section>
+
+    <section>
+        <h2>Prueba 2: Rejilla de 12 Columnas</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 test-box">col-12</div>
+                <div class="col-6 test-box">col-6</div>
+                <div class="col-6 test-box">col-6</div>
+                <div class="col-4 test-box">col-4</div>
+                <div class="col-4 test-box">col-4</div>
+                <div class="col-4 test-box">col-4</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Prueba 3: Responsive (Móvil vs Tablet vs PC)</h2>
+        <p>En móvil verás 1 columna, en Tablet 2, en PC 3.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 test-box">Caja 1</div>
+                <div class="col-12 col-md-6 col-lg-4 test-box">Caja 2</div>
+                <div class="col-12 col-md-6 col-lg-4 test-box">Caja 3</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
