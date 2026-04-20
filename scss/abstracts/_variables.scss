@@ -15,3 +15,25 @@ $theme-colors: (
   "dark":      $nordic-ash,
   "light":     $snow-white
 );
+
+
+// Breakpoints (Puntos de parada para el diseño responsivo)
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Anchos máximos para los contenedores en cada etapa
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Espaciado interno estándar (Gutter)
+$gutter-width: 15px;

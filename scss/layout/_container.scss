@@ -1,0 +1,33 @@
+@use "sass:map";
+@use '../abstracts/variables' as *;
+
+// Estilo base para todos los contenedores
+%container-base {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $gutter-width;
+  padding-left: $gutter-width;
+}
+
+// Aplicación del estilo base a todas las variantes de contenedor
+// Estas son las "clases" para usar los contenedores
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  @extend %container-base;
+}
+
+// Generación automática de contenedores responsivos
+@each $breakpoint, $max-width in $container-max-widths {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    .container,
+    .container-#{$breakpoint} {
+      max-width: $max-width;
+    }
+  }
+}
