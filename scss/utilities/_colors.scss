@@ -13,9 +13,11 @@
     .bg-#{$name}{
         background-color: $color !important;
 
-        //Valida que si el color es oscuro, el texto hijo será claro
-        @if $name == "dark" or $name == "danger" or $name == "success"{
-            color: $snow-white;
+        //Valida que si el color es oscuro o claro, el texto hijo será claro u oscuro
+        @if $name == "dark" or $name == "danger" or $name == "success" or $name == "primary" or $name == "accent" or $name == "pink" or $name == "pig"{
+            color: $matilda-white !important;
+        } @else if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold"{
+            color: $bomb-black !important;
         }
     }
 }
