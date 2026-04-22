@@ -53,3 +53,17 @@ $font-display: 'Henny Penny', cursive;
 $font-accent:   'Jolly Lodger', cursive;
 $font-body: 'Quicksand', sans-serif;
 $font-code:    'Courier New', Courier, monospace;
+
+
+// --- SECCIÓN 2: VARIABLES DE COMPONENTES ---
+
+// Espaciado
+$spacers: (
+  1: 4px,
+  2: 8px,
+  3: 16px,
+  4: 24px,
+  5: 32px,
+  6: 48px,
+  7: 64px
+);
