@@ -1,5 +1,6 @@
 @use "sass:map";
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 // --- MODELO DE FILAS ---
 // La fila anula los paddings laterales del contenedor para alinear las columnas.
@@ -10,15 +11,14 @@
   margin-left: calc($gutter-width * -1);
 }
 
+
 // --- SISTEMA DE 12 COLUMNAS (Mobile First) ---
-// Generamos las clases base .col-1 a .col-12 que aplican desde móviles.
+
+// Generamos las clases base .col-1 a .col-12 que aplican desde móviles (Mobile First).
 @for $i from 1 through 12 {
   .col-#{$i} {
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    width: calc(100% / 12 * #{$i});
-    padding-right: $gutter-width;
-    padding-left: $gutter-width;
+    @include col-base;
+    width: col-width($i);
   }
 }
 
@@ -29,7 +29,8 @@
 @media (min-width: map.get($breakpoints, md)) {
   @for $i from 1 through 12 {
     .col-md-#{$i} {
-      width: calc(100% / 12 * #{$i});
+      @include col-base;
+      width: col-width($i);
     }
   }
 }
@@ -38,7 +39,8 @@
 @media (min-width: map.get($breakpoints, lg)) {
   @for $i from 1 through 12 {
     .col-lg-#{$i} {
-      width: calc(100% / 12 * #{$i});
+      @include col-base;
+      width: col-width($i);
     }
   }
 }
