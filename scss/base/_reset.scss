@@ -1,3 +1,7 @@
+@use '../abstracts/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Indie+Flower&display=swap');
+
 // Reseteo Global
 *, *::before, *::after {
     margin: 0;
@@ -14,7 +18,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden; // Garantía final contra el scroll horizontal
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // O la que prefieras para tu tema
+    font-family: $font-body;
 }
 
 img, picture, video, canvas, svg {
