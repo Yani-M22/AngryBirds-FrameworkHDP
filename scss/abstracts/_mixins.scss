@@ -1,6 +1,13 @@
 @use 'variables' as *;
 @use "sass:map";
 
+//BASE COMPARTIDA PARA TODAS LAS COLUMNAS DEL GRID
+@mixin col-base {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: $gutter-width;
+  padding-left: $gutter-width;
+}
 
 //Media Query responsiva
 @mixin respond-to($breakpoint) {
