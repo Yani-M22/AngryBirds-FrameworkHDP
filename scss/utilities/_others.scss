@@ -1,0 +1,12 @@
+// --- BORDES REDONDEADOS ---
+.rounded-sm     { border-radius: 4px; }
+.rounded        { border-radius: 8px; }
+.rounded-lg     { border-radius: 16px; }
+.rounded-pill   { border-radius: 9999px; }
+.rounded-circle { border-radius: 50%; }
+
+// --- SOMBRAS ---
+.shadow-sm   { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); }
+.shadow      { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20); }
+.shadow-lg   { box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
+.shadow-none { box-shadow: none; }
