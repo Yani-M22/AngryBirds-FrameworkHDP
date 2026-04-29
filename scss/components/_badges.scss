@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *;
+@use "sass:color";
+
+// --- BASE DEL BADGE ---
+// Estilos compartidos por todas las variantes
+%badge-base {
+  display: inline-block;
+  font-family: $font-accent; // Jolly Lodger para darle personalidad temática
+  font-weight: 700;
+  font-size: to-rem(12px);
+  padding: 3px 8px;
+  border: 2px solid transparent; // Borde base, se sobreescribe en cada color
+  line-height: 1;
+}
+
+// --- VARIANTE REDONDEADA ESTÁNDAR ---
+@each $name, $color in $theme-colors {
+  .badge.badge-#{$name} {
+    @extend %badge-base;
+    background-color: $color;
+    border-color: color.adjust($color, $lightness: -15%); // Borde oscuro efecto caricatura
+    border-radius: 4px;
+
+    @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+      color: $bomb-black;
+    } @else {
+      color: $matilda-white;
+    }
+  }
+}
+
+// --- VARIANTE PÍLDORA ---
+@each $name, $color in $theme-colors {
+  .badge-pill.badge-#{$name} {
+    @extend %badge-base;
+    background-color: $color;
+    border-color: color.adjust($color, $lightness: -15%);
+    border-radius: 9999px; // Completamente redondeado
+
+    @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+      color: $bomb-black;
+    } @else {
+      color: $matilda-white;
+    }
+  }
+}
