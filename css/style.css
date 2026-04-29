@@ -1473,6 +1473,219 @@ a {
   color: #1A1A1A;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  font-family: "Jolly Lodger", cursive;
+  font-size: 1rem;
+  color: #1A1A1A;
+  letter-spacing: 1px;
+}
+
+.form-select, .form-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.875rem;
+  color: #1A1A1A;
+  background-color: #F5F5F0;
+  border: 2px solid rgba(26, 26, 26, 0.2);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-select:focus, .form-input:focus {
+  border-color: #4A90D9;
+  box-shadow: 0 3px 0 #4A90D9;
+}
+.form-select::placeholder, .form-input::placeholder {
+  color: rgba(26, 26, 26, 0.35);
+  font-family: "Quicksand", sans-serif;
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231A1A1A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.875rem;
+  color: #1A1A1A;
+}
+.form-check input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4A90D9;
+  cursor: pointer;
+}
+
+.is-valid {
+  border-color: #27AE60 !important;
+  box-shadow: 0 3px 0 #27AE60 !important;
+}
+.is-valid:focus {
+  border-color: #27AE60;
+  box-shadow: 0 3px 0 #27AE60;
+}
+
+.is-invalid {
+  border-color: #C0392B !important;
+  box-shadow: 0 3px 0 #C0392B !important;
+}
+.is-invalid:focus {
+  border-color: #C0392B;
+  box-shadow: 0 3px 0 #C0392B;
+}
+
+.valid-feedback {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.75rem;
+  color: #27AE60;
+  margin-top: 4px;
+}
+
+.invalid-feedback {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.75rem;
+  color: #C0392B;
+  margin-top: 4px;
+}
+
+.form-input-sm,
+.form-select-sm {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+}
+
+.form-input-lg,
+.form-select-lg {
+  padding: 14px 18px;
+  font-size: 1.125rem;
+}
+
+.form-input-primary,
+.form-select-primary {
+  border-color: rgba(74, 144, 217, 0.4);
+}
+.form-input-primary:focus,
+.form-select-primary:focus {
+  border-color: #4A90D9;
+  box-shadow: 0 3px 0 #4A90D9;
+}
+
+.form-input-danger,
+.form-select-danger {
+  border-color: rgba(192, 57, 43, 0.4);
+}
+.form-input-danger:focus,
+.form-select-danger:focus {
+  border-color: #C0392B;
+  box-shadow: 0 3px 0 #C0392B;
+}
+
+.form-input-warning,
+.form-select-warning {
+  border-color: rgba(245, 197, 24, 0.4);
+}
+.form-input-warning:focus,
+.form-select-warning:focus {
+  border-color: #F5C518;
+  box-shadow: 0 3px 0 #F5C518;
+}
+
+.form-input-success,
+.form-select-success {
+  border-color: rgba(39, 174, 96, 0.4);
+}
+.form-input-success:focus,
+.form-select-success:focus {
+  border-color: #27AE60;
+  box-shadow: 0 3px 0 #27AE60;
+}
+
+.form-input-dark,
+.form-select-dark {
+  border-color: rgba(26, 26, 26, 0.4);
+}
+.form-input-dark:focus,
+.form-select-dark:focus {
+  border-color: #1A1A1A;
+  box-shadow: 0 3px 0 #1A1A1A;
+}
+
+.form-input-light,
+.form-select-light {
+  border-color: rgba(245, 245, 240, 0.4);
+}
+.form-input-light:focus,
+.form-select-light:focus {
+  border-color: #F5F5F0;
+  box-shadow: 0 3px 0 #F5F5F0;
+}
+
+.form-input-accent,
+.form-select-accent {
+  border-color: rgba(232, 130, 26, 0.4);
+}
+.form-input-accent:focus,
+.form-select-accent:focus {
+  border-color: #E8821A;
+  box-shadow: 0 3px 0 #E8821A;
+}
+
+.form-input-pink,
+.form-select-pink {
+  border-color: rgba(214, 51, 132, 0.4);
+}
+.form-input-pink:focus,
+.form-select-pink:focus {
+  border-color: #D63384;
+  box-shadow: 0 3px 0 #D63384;
+}
+
+.form-input-gold,
+.form-select-gold {
+  border-color: rgba(200, 169, 81, 0.4);
+}
+.form-input-gold:focus,
+.form-select-gold:focus {
+  border-color: #C8A951;
+  box-shadow: 0 3px 0 #C8A951;
+}
+
+.form-input-pig,
+.form-select-pig {
+  border-color: rgba(90, 138, 60, 0.4);
+}
+.form-input-pig:focus,
+.form-select-pig:focus {
+  border-color: #5A8A3C;
+  box-shadow: 0 3px 0 #5A8A3C;
+}
+
+.form-input-silver,
+.form-select-silver {
+  border-color: rgba(158, 158, 158, 0.4);
+}
+.form-input-silver:focus,
+.form-select-silver:focus {
+  border-color: #9E9E9E;
+  box-shadow: 0 3px 0 #9E9E9E;
+}
+
 .badge-pill.badge-silver, .badge-pill.badge-pig, .badge-pill.badge-gold, .badge-pill.badge-pink, .badge-pill.badge-accent, .badge-pill.badge-light, .badge-pill.badge-dark, .badge-pill.badge-success, .badge-pill.badge-warning, .badge-pill.badge-danger, .badge-pill.badge-primary, .badge.badge-silver, .badge.badge-pig, .badge.badge-gold, .badge.badge-pink, .badge.badge-accent, .badge.badge-light, .badge.badge-dark, .badge.badge-success, .badge.badge-warning, .badge.badge-danger, .badge.badge-primary {
   display: inline-block;
   font-family: "Jolly Lodger", cursive;

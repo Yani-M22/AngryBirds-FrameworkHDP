@@ -1,0 +1,150 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "sass:color";
+
+// --- GRUPO DE CAMPO ---
+// Contenedor que agrupa label + input
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+// --- LABEL ---
+.form-label {
+  font-family: $font-accent; // Jolly Lodger para darle personalidad temática
+  font-size: to-rem(16px);
+  color: $bomb-black;
+  letter-spacing: 1px;
+}
+
+// --- ESTILOS BASE COMPARTIDOS (input y select) ---
+%field-base {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: $font-body;
+  font-size: to-rem(14px);
+  color: $bomb-black;
+  background-color: $matilda-white;
+  border: 2px solid rgba($bomb-black, 0.2);
+  border-radius: 6px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  // Focus — borde inferior de color temático
+  &:focus {
+    border-color: $blues-blue;
+    box-shadow: 0 3px 0 $blues-blue; // Acento inferior en focus
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: rgba($bomb-black, 0.35);
+    font-family: $font-body;
+  }
+}
+
+// --- INPUT ---
+.form-input {
+  @extend %field-base;
+}
+
+// --- SELECT ---
+.form-select {
+  @extend %field-base;
+  cursor: pointer;
+  appearance: none; // Quita la flecha nativa del navegador
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231A1A1A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center; // Flecha personalizada a la derecha
+}
+
+// --- CHECKBOX ---
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: $font-body;
+  font-size: to-rem(14px);
+  color: $bomb-black;
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: $blues-blue; // Color temático al marcar
+    cursor: pointer;
+  }
+}
+
+// --- ESTADOS DE VALIDACIÓN ---
+
+// Válido
+.is-valid {
+  border-color: $hal-green !important;
+  box-shadow: 0 3px 0 $hal-green !important;
+
+  &:focus {
+    border-color: $hal-green;
+    box-shadow: 0 3px 0 $hal-green;
+  }
+}
+
+// Inválido
+.is-invalid {
+  border-color: $red-bird !important;
+  box-shadow: 0 3px 0 $red-bird !important;
+
+  &:focus {
+    border-color: $red-bird;
+    box-shadow: 0 3px 0 $red-bird;
+  }
+}
+
+// Mensajes de validación
+.valid-feedback {
+  font-family: $font-body;
+  font-size: to-rem(12px);
+  color: $hal-green;
+  margin-top: 4px;
+}
+
+.invalid-feedback {
+  font-family: $font-body;
+  font-size: to-rem(12px);
+  color: $red-bird;
+  margin-top: 4px;
+}
+
+// --- VARIANTES DE TAMAÑO ---
+
+// Pequeño
+.form-input-sm,
+.form-select-sm {
+  padding: 6px 10px;
+  font-size: to-rem(12px);
+}
+
+// Grande
+.form-input-lg,
+.form-select-lg {
+  padding: 14px 18px;
+  font-size: to-rem(18px);
+}
+
+// --- VARIANTES DE COLOR ---
+// El borde y acento en focus cambian según el color
+@each $name, $color in $theme-colors {
+  .form-input-#{$name},
+  .form-select-#{$name} {
+    border-color: rgba($color, 0.40);
+
+    &:focus {
+      border-color: $color;
+      box-shadow: 0 3px 0 $color;
+    }
+  }
+}
