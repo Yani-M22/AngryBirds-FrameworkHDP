@@ -1,0 +1,145 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use "sass:color";
+
+// --- BASE DEL BOTÓN ---
+.btn {
+  @include flex-center; // Centra el texto e iconos dentro del botón
+  display: inline-flex;
+  font-family: $font-display; // Fuente temática Angry Birds
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid transparent; // Borde base, se sobreescribe en cada variante
+  transition: all 0.15s ease; // Animación suave en todos los estados
+  text-decoration: none;
+
+  // --- TAMAÑOS ---
+  &.btn-sm {
+    font-size: to-rem(12px);
+    padding: 6px 12px;
+  }
+
+  &.btn-md {
+    font-size: to-rem(16px);
+    padding: 10px 20px;
+  }
+
+  &.btn-lg {
+    font-size: to-rem(20px);
+    padding: 14px 28px;
+  }
+
+  // --- ESTADO DISABLED ---
+  &:disabled,
+  &.disabled {
+    opacity: 0.5; // Reduce visibilidad para indicar que no es interactivo
+    cursor: not-allowed;
+    pointer-events: none; // Bloquea cualquier interacción del mouse
+  }
+}
+
+// --- VARIANTE SOLID ---
+@each $name, $color in $theme-colors {
+  .btn-solid.btn-#{$name} {
+    background-color: $color;
+    border-color: color.adjust($color, $lightness: -15%); // Borde más oscuro efecto caricatura
+    border-radius: 8px;
+    box-shadow: 0 5px 0 color.adjust($color, $lightness: -20%); // Sombra inferior efecto 3D
+
+    // Contraste de texto según el color de fondo
+    @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+      color: $bomb-black;
+    } @else {
+      color: $matilda-white;
+    }
+
+    &:hover {
+      background-color: color.adjust($color, $lightness: -8%);
+      transform: translateY(-2px); // Sube como si se tensara la honda
+      box-shadow: 0 7px 0 color.adjust($color, $lightness: -20%);
+    }
+
+    &:active {
+      background-color: color.adjust($color, $lightness: -15%);
+      transform: translateY(3px); // Baja como si fuera lanzado
+      box-shadow: 0 2px 0 color.adjust($color, $lightness: -20%);
+    }
+  }
+}
+
+// --- VARIANTE OUTLINE ---
+@each $name, $color in $theme-colors {
+  .btn-outline.btn-#{$name} {
+    background-color: transparent;
+    border-color: $color;
+    border-radius: 8px;
+    color: $color;
+
+    &:hover {
+      background-color: $color; // Se rellena con el color en hover
+      transform: translateY(-2px);
+
+      @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+        color: $bomb-black;
+      } @else {
+        color: $matilda-white;
+      }
+    }
+
+    &:active {
+      background-color: color.adjust($color, $lightness: -10%);
+      transform: translateY(3px);
+      color: $matilda-white;
+    }
+  }
+}
+
+// --- VARIANTE GHOST ---
+@each $name, $color in $theme-colors {
+  .btn-ghost.btn-#{$name} {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 8px;
+    color: $color;
+
+    &:hover {
+      background-color: rgba($color, 0.15); // Fondo suave semitransparente
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      background-color: rgba($color, 0.25);
+      transform: translateY(3px);
+    }
+  }
+}
+
+// --- VARIANTE PILL ---
+@each $name, $color in $theme-colors {
+  .btn-pill.btn-#{$name} {
+    background-color: $color;
+    border-color: color.adjust($color, $lightness: -15%);
+    border-radius: 9999px; // Completamente redondeado
+    box-shadow: 0 5px 0 color.adjust($color, $lightness: -20%);
+
+    @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+      color: $bomb-black;
+    } @else {
+      color: $matilda-white;
+    }
+
+    &:hover {
+      background-color: color.adjust($color, $lightness: -8%);
+      transform: translateY(-2px);
+      box-shadow: 0 7px 0 color.adjust($color, $lightness: -20%);
+    }
+
+    &:active {
+      background-color: color.adjust($color, $lightness: -15%);
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 color.adjust($color, $lightness: -20%);
+    }
+  }
+}
