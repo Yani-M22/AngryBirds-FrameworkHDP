@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+@use "sass:color";
+
+// --- BASE DE LA CARD ---
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $matilda-white;
+  border-radius: 8px;
+  overflow: hidden; // Evita que la imagen se desborde del borde redondeado
+  box-shadow: 4px 4px 12px rgba($bomb-black, 0.15); // Sombra lateral
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px); // Sube suavemente en hover
+    box-shadow: 6px 6px 20px rgba($bomb-black, 0.25);
+  }
+
+  // --- IMAGEN ---
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; // Recorta la imagen para que ocupe el espacio sin deformarse
+  }
+
+  // --- ENCABEZADO ---
+  .card-header {
+    padding: 12px 16px;
+    font-family: $font-accent; // Jolly Lodger para darle personalidad
+    font-size: to-rem(20px);
+    border-bottom: 1px solid rgba($bomb-black, 0.10);
+    background-color: rgba($bomb-black, 0.05); // Fondo sutil diferente al body
+  }
+
+  // --- CUERPO ---
+  .card-body {
+    padding: 16px;
+    font-family: $font-body;
+    font-size: to-rem(14px);
+    line-height: 1.6;
+    flex: 1; // Ocupa el espacio disponible para empujar el footer hacia abajo
+    color: $bomb-black;
+  }
+
+  // --- PIE ---
+  .card-footer {
+    padding: 12px 16px;
+    font-family: $font-body;
+    font-size: to-rem(13px);
+    border-top: 1px solid rgba($bomb-black, 0.10);
+    background-color: rgba($bomb-black, 0.05); // Fondo sutil igual que header
+  }
+}
+
+// --- VARIANTES DE COLOR ---
+@each $name, $color in $theme-colors {
+  .card.card-#{$name} {
+    border-top: 4px solid $color;
+
+    .card-header {
+      background-color: $color; // Fondo sólido del color
+      border-bottom: none;
+
+      @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+        color: $bomb-black;
+      } @else {
+        color: $matilda-white;
+      }
+    }
+
+    .card-footer {
+      background-color: rgba($color, 0.12); // Fondo suave semitransparente
+      border-top: 1px solid rgba($color, 0.25);
+      color: $bomb-black;
+    }
+  }
+}

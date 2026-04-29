@@ -1135,6 +1135,202 @@ a {
   box-shadow: 0 2px 0 #6b6b6b;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 4px 4px 12px rgba(26, 26, 26, 0.15);
+  margin-bottom: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 20px rgba(26, 26, 26, 0.25);
+}
+.card .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card .card-header {
+  padding: 12px 16px;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 1.25rem;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  background-color: rgba(26, 26, 26, 0.05);
+}
+.card .card-body {
+  padding: 16px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  flex: 1;
+  color: #1A1A1A;
+}
+.card .card-footer {
+  padding: 12px 16px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.8125rem;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  background-color: rgba(26, 26, 26, 0.05);
+}
+
+.card.card-primary {
+  border-top: 4px solid #4A90D9;
+}
+.card.card-primary .card-header {
+  background-color: #4A90D9;
+  border-bottom: none;
+  color: #F5F5F0;
+}
+.card.card-primary .card-footer {
+  background-color: rgba(74, 144, 217, 0.12);
+  border-top: 1px solid rgba(74, 144, 217, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-danger {
+  border-top: 4px solid #C0392B;
+}
+.card.card-danger .card-header {
+  background-color: #C0392B;
+  border-bottom: none;
+  color: #F5F5F0;
+}
+.card.card-danger .card-footer {
+  background-color: rgba(192, 57, 43, 0.12);
+  border-top: 1px solid rgba(192, 57, 43, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-warning {
+  border-top: 4px solid #F5C518;
+}
+.card.card-warning .card-header {
+  background-color: #F5C518;
+  border-bottom: none;
+  color: #1A1A1A;
+}
+.card.card-warning .card-footer {
+  background-color: rgba(245, 197, 24, 0.12);
+  border-top: 1px solid rgba(245, 197, 24, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-success {
+  border-top: 4px solid #27AE60;
+}
+.card.card-success .card-header {
+  background-color: #27AE60;
+  border-bottom: none;
+  color: #F5F5F0;
+}
+.card.card-success .card-footer {
+  background-color: rgba(39, 174, 96, 0.12);
+  border-top: 1px solid rgba(39, 174, 96, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-dark {
+  border-top: 4px solid #1A1A1A;
+}
+.card.card-dark .card-header {
+  background-color: #1A1A1A;
+  border-bottom: none;
+  color: #F5F5F0;
+}
+.card.card-dark .card-footer {
+  background-color: rgba(26, 26, 26, 0.12);
+  border-top: 1px solid rgba(26, 26, 26, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-light {
+  border-top: 4px solid #F5F5F0;
+}
+.card.card-light .card-header {
+  background-color: #F5F5F0;
+  border-bottom: none;
+  color: #1A1A1A;
+}
+.card.card-light .card-footer {
+  background-color: rgba(245, 245, 240, 0.12);
+  border-top: 1px solid rgba(245, 245, 240, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-accent {
+  border-top: 4px solid #E8821A;
+}
+.card.card-accent .card-header {
+  background-color: #E8821A;
+  border-bottom: none;
+  color: #F5F5F0;
+}
+.card.card-accent .card-footer {
+  background-color: rgba(232, 130, 26, 0.12);
+  border-top: 1px solid rgba(232, 130, 26, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-pink {
+  border-top: 4px solid #D63384;
+}
+.card.card-pink .card-header {
+  background-color: #D63384;
+  border-bottom: none;
+  color: #F5F5F0;
+}
+.card.card-pink .card-footer {
+  background-color: rgba(214, 51, 132, 0.12);
+  border-top: 1px solid rgba(214, 51, 132, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-gold {
+  border-top: 4px solid #C8A951;
+}
+.card.card-gold .card-header {
+  background-color: #C8A951;
+  border-bottom: none;
+  color: #1A1A1A;
+}
+.card.card-gold .card-footer {
+  background-color: rgba(200, 169, 81, 0.12);
+  border-top: 1px solid rgba(200, 169, 81, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-pig {
+  border-top: 4px solid #5A8A3C;
+}
+.card.card-pig .card-header {
+  background-color: #5A8A3C;
+  border-bottom: none;
+  color: #F5F5F0;
+}
+.card.card-pig .card-footer {
+  background-color: rgba(90, 138, 60, 0.12);
+  border-top: 1px solid rgba(90, 138, 60, 0.25);
+  color: #1A1A1A;
+}
+
+.card.card-silver {
+  border-top: 4px solid #9E9E9E;
+}
+.card.card-silver .card-header {
+  background-color: #9E9E9E;
+  border-bottom: none;
+  color: #1A1A1A;
+}
+.card.card-silver .card-footer {
+  background-color: rgba(158, 158, 158, 0.12);
+  border-top: 1px solid rgba(158, 158, 158, 0.25);
+  color: #1A1A1A;
+}
+
 .alert.alert-silver, .alert.alert-pig, .alert.alert-gold, .alert.alert-pink, .alert.alert-accent, .alert.alert-light, .alert.alert-dark, .alert.alert-success, .alert.alert-warning, .alert.alert-danger, .alert.alert-primary {
   display: block;
   width: 100%;
