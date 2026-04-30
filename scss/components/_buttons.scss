@@ -1,12 +1,13 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
 @use '../abstracts/functions' as *;
 @use "sass:color";
 
 // --- BASE DEL BOTÓN ---
 .btn {
-  @include flex-center; // Centra el texto e iconos dentro del botón
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; // Espacio entre ícono y texto
   font-family: $font-display; // Fuente temática Angry Birds
   font-weight: 700;
   text-transform: uppercase;
