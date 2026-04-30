@@ -64,20 +64,14 @@
 
   // --- TABLA CON BORDES EN TODAS LAS CELDAS ---
   &.table-bordered {
-    border: 2px solid $bomb-black; // Borde exterior de la tabla
+    border: 2px solid $bomb-black;
 
-    thead {
-      th {
-        border: 2px solid color.adjust($bomb-black, $lightness: 20%); // Bordes entre encabezados
-      }
+    th {
+      border: 2px solid color.adjust($bomb-black, $lightness: 20%);
     }
 
-    tbody {
-      tr {
-        td {
-          border: 1px solid rgba($bomb-black, 0.25); // Bordes en todas las celdas
-        }
-      }
+    td {
+      border: 1px solid rgba($bomb-black, 0.25);
     }
   }
 
@@ -86,26 +80,24 @@
     background-color: $bomb-black;
     color: $matilda-white;
 
-    thead {
-      background-color: $red-bird; // Encabezado rojo temático
-      
-      th {
-        color: $matilda-white;
-        border-bottom: 3px solid color.adjust($red-bird, $lightness: -15%);
-      }
+    th {
+      color: $matilda-white;
+      border-bottom: 3px solid color.adjust($red-bird, $lightness: -15%);
     }
 
-    tbody {
-      tr {
-        border-bottom: 1px solid rgba($matilda-white, 0.10);
+    thead {
+      background-color: $red-bird;
+    }
 
-        td {
-          color: $matilda-white;
-        }
+    td {
+      color: $matilda-white;
+    }
 
-        &:hover {
-          background-color: rgba($matilda-white, 0.05);
-        }
+    tr {
+      border-bottom: 1px solid rgba($matilda-white, 0.10);
+
+      &:hover {
+        background-color: rgba($matilda-white, 0.05);
       }
     }
   }
