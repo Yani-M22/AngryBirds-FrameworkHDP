@@ -13,6 +13,11 @@
   background-color: $bomb-black;
   border-bottom: 3px solid $red-bird; // Acento inferior temático
   position: relative;
+  z-index: 1;
+
+    &.navbar--active {
+        z-index: 100; // Se eleva cuando su menú está abierto
+    }
 
   // --- LOGO/MARCA ---
   .navbar-brand {
@@ -72,7 +77,7 @@
     left: 0;
     background-color: $bomb-black;
     padding: 12px 24px;
-    z-index: 100; // Evita que el menú tape o quede tapado por otros elementos
+    z-index: auto; // Evita que el menú tape o quede tapado por otros elementos
 
     @include respond-to(md) {
       display: flex; // Visible en tablet y escritorio
@@ -119,11 +124,11 @@
 // --- VARIANTES DE COLOR ---
 @each $name, $color in $theme-colors {
   .navbar.navbar-#{$name} {
-    background-color: color.adjust($color, $lightness: -15%);
-    border-bottom-color: color.adjust($color, $lightness: -25%);
+    background-color: $color;
+    border-bottom-color: color.adjust($color, $lightness: -15%);
 
     .navbar-menu {
-        background-color: color.adjust($color, $lightness: -15%);
+        background-color: $color;
     }
     .navbar-brand {
       @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {

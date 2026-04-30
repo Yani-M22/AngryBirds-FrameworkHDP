@@ -1339,6 +1339,10 @@ a {
   background-color: #1A1A1A;
   border-bottom: 3px solid #C0392B;
   position: relative;
+  z-index: 1;
+}
+.navbar.navbar--active {
+  z-index: 100;
 }
 .navbar .navbar-brand {
   display: flex;
@@ -1390,7 +1394,7 @@ a {
   left: 0;
   background-color: #1A1A1A;
   padding: 12px 24px;
-  z-index: 100;
+  z-index: auto;
 }
 @media (min-width: 768px) {
   .navbar .navbar-menu {
@@ -1426,11 +1430,11 @@ a {
 }
 
 .navbar.navbar-primary {
-  background-color: rgb(37.2191780822, 105.7808219178, 177.2808219178);
-  border-bottom-color: rgb(28.3698630137, 80.6301369863, 135.1301369863);
+  background-color: #4A90D9;
+  border-bottom-color: rgb(37.2191780822, 105.7808219178, 177.2808219178);
 }
 .navbar.navbar-primary .navbar-menu {
-  background-color: rgb(37.2191780822, 105.7808219178, 177.2808219178);
+  background-color: #4A90D9;
 }
 .navbar.navbar-primary .navbar-brand {
   color: #F5F5F0;
@@ -1463,11 +1467,11 @@ a {
 }
 
 .navbar.navbar-danger {
-  background-color: rgb(129.4978723404, 38.4446808511, 29.0021276596);
-  border-bottom-color: rgb(87.829787234, 26.0744680851, 19.670212766);
+  background-color: #C0392B;
+  border-bottom-color: rgb(129.4978723404, 38.4446808511, 29.0021276596);
 }
 .navbar.navbar-danger .navbar-menu {
-  background-color: rgb(129.4978723404, 38.4446808511, 29.0021276596);
+  background-color: #C0392B;
 }
 .navbar.navbar-danger .navbar-brand {
   color: #F5F5F0;
@@ -1500,11 +1504,11 @@ a {
 }
 
 .navbar.navbar-warning {
-  background-color: rgb(184.5124481328, 146.1721991701, 7.9875518672);
-  border-bottom-color: rgb(135.6286307054, 107.4460580913, 5.8713692946);
+  background-color: #F5C518;
+  border-bottom-color: rgb(184.5124481328, 146.1721991701, 7.9875518672);
 }
 .navbar.navbar-warning .navbar-menu {
-  background-color: rgb(184.5124481328, 146.1721991701, 7.9875518672);
+  background-color: #F5C518;
 }
 .navbar.navbar-warning .navbar-brand {
   color: #1A1A1A;
@@ -1537,11 +1541,11 @@ a {
 }
 
 .navbar.navbar-success {
-  background-color: rgb(24.9929577465, 111.5070422535, 61.5211267606);
-  border-bottom-color: rgb(15.6549295775, 69.8450704225, 38.5352112676);
+  background-color: #27AE60;
+  border-bottom-color: rgb(24.9929577465, 111.5070422535, 61.5211267606);
 }
 .navbar.navbar-success .navbar-menu {
-  background-color: rgb(24.9929577465, 111.5070422535, 61.5211267606);
+  background-color: #27AE60;
 }
 .navbar.navbar-success .navbar-brand {
   color: #F5F5F0;
@@ -1574,11 +1578,11 @@ a {
 }
 
 .navbar.navbar-dark {
-  background-color: hsl(0, 0%, -4.8039215686%);
-  border-bottom-color: hsl(0, 0%, -14.8039215686%);
+  background-color: #1A1A1A;
+  border-bottom-color: hsl(0, 0%, -4.8039215686%);
 }
 .navbar.navbar-dark .navbar-menu {
-  background-color: hsl(0, 0%, -4.8039215686%);
+  background-color: #1A1A1A;
 }
 .navbar.navbar-dark .navbar-brand {
   color: #F5F5F0;
@@ -1611,11 +1615,11 @@ a {
 }
 
 .navbar.navbar-light {
-  background-color: rgb(214.4, 214.4, 194.1);
-  border-bottom-color: rgb(194, 194, 163.5);
+  background-color: #F5F5F0;
+  border-bottom-color: rgb(214.4, 214.4, 194.1);
 }
 .navbar.navbar-light .navbar-menu {
-  background-color: rgb(214.4, 214.4, 194.1);
+  background-color: #F5F5F0;
 }
 .navbar.navbar-light .navbar-brand {
   color: #1A1A1A;
@@ -1648,11 +1652,11 @@ a {
 }
 
 .navbar.navbar-accent {
-  background-color: rgb(164.9345238095, 91.4702380952, 16.5654761905);
-  border-bottom-color: rgb(118.5892857143, 65.7678571429, 11.9107142857);
+  background-color: #E8821A;
+  border-bottom-color: rgb(164.9345238095, 91.4702380952, 16.5654761905);
 }
 .navbar.navbar-accent .navbar-menu {
-  background-color: rgb(164.9345238095, 91.4702380952, 16.5654761905);
+  background-color: #E8821A;
 }
 .navbar.navbar-accent .navbar-brand {
   color: #F5F5F0;
@@ -1685,11 +1689,11 @@ a {
 }
 
 .navbar.navbar-pink {
-  background-color: rgb(156.9551020408, 31.5448979592, 93.8653061224);
-  border-bottom-color: rgb(114.4897959184, 23.0102040816, 68.4693877551);
+  background-color: #D63384;
+  border-bottom-color: rgb(156.9551020408, 31.5448979592, 93.8653061224);
 }
 .navbar.navbar-pink .navbar-menu {
-  background-color: rgb(156.9551020408, 31.5448979592, 93.8653061224);
+  background-color: #D63384;
 }
 .navbar.navbar-pink .navbar-brand {
   color: #F5F5F0;
@@ -1722,11 +1726,11 @@ a {
 }
 
 .navbar.navbar-gold {
-  background-color: rgb(155.384279476, 127.7008733624, 49.115720524);
-  border-bottom-color: rgb(116.6331877729, 95.8537117904, 36.8668122271);
+  background-color: #C8A951;
+  border-bottom-color: rgb(155.384279476, 127.7008733624, 49.115720524);
 }
 .navbar.navbar-gold .navbar-menu {
-  background-color: rgb(155.384279476, 127.7008733624, 49.115720524);
+  background-color: #C8A951;
 }
 .navbar.navbar-gold .navbar-brand {
   color: #1A1A1A;
@@ -1759,11 +1763,11 @@ a {
 }
 
 .navbar.navbar-pig {
-  background-color: rgb(55.2272727273, 84.6818181818, 36.8181818182);
-  border-bottom-color: rgb(32.0454545455, 49.1363636364, 21.3636363636);
+  background-color: #5A8A3C;
+  border-bottom-color: rgb(55.2272727273, 84.6818181818, 36.8181818182);
 }
 .navbar.navbar-pig .navbar-menu {
-  background-color: rgb(55.2272727273, 84.6818181818, 36.8181818182);
+  background-color: #5A8A3C;
 }
 .navbar.navbar-pig .navbar-brand {
   color: #F5F5F0;
@@ -1796,11 +1800,11 @@ a {
 }
 
 .navbar.navbar-silver {
-  background-color: rgb(119.75, 119.75, 119.75);
-  border-bottom-color: rgb(94.25, 94.25, 94.25);
+  background-color: #9E9E9E;
+  border-bottom-color: rgb(119.75, 119.75, 119.75);
 }
 .navbar.navbar-silver .navbar-menu {
-  background-color: rgb(119.75, 119.75, 119.75);
+  background-color: #9E9E9E;
 }
 .navbar.navbar-silver .navbar-brand {
   color: #1A1A1A;
