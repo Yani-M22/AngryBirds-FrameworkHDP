@@ -1,4 +1,19 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .d-none         { display: none; } //Oculta el elemento
 .d-block        { display: block; } // Lo muestra como bloque
 .d-inline       { display: inline; } //Lo muestra en línea
 .d-inline-block { display: inline-block; } // Como bloque en linea
+.d-flex {display: flex;}
+
+//Variantes responsivas
+@each $bp, $value in $breakpoints{
+    @include respond-to($bp){
+        .d-#{$bp}-none {display: none !important;}
+        .d-#{$bp}-block {display: block !important;}
+        .d-#{$bp}-inline {display: inline !important;}
+        .d-#{$bp}-inline-block {display: inline-block !important;}
+        .d-#{$bp}-flex {display: flex !important;}
+    }
+}
