@@ -10,7 +10,7 @@
     <!-- ============================================
        NAVBAR FIJA
   ============================================ -->
-    <nav class="navbar" id="main-navbar">
+    <nav class="navbar" id="main-navbar" style="position: fixed; top: 0; left: 0; right: 0; width: 100%;">
       <a href="#inicio" class="navbar-brand">
         <img
           src="../assets/logo/logo.png"
@@ -37,6 +37,7 @@
         <a href="#utilidades" class="navbar-item">Utilidades</a>
       </div>
     </nav>
+    <div style="height: 67px;"></div>
 
     <!-- ============================================
        HERO / PORTADA
@@ -223,60 +224,60 @@
     <!-- ============================================
        GRID SYSTEM
   ============================================ -->
-  < id="grid" style="background-color: #4A90D9; padding: 60px 0;">
-    <div class="container">
+  <section id="grid" style="background-color: #4A90D9; padding: 60px 0;">
+        <div class="container">
 
-      <h2 class="font-display text-center mb-4" style="font-size: 2rem; color: #F5F5F0;">
-        📐 Grid System
-      </h2>
-      <p class="font-body text-center mb-4" style="color: #F5F5F0;">
-        Sistema de 12 columnas Mobile First. Usa <code>.row</code> y <code>.col-*</code> para estructurar tu layout.
-      </p>
+        <h2 class="font-display text-center mb-4" style="font-size: 2rem; color: #F5F5F0;">
+            📐 Grid System
+        </h2>
+        <p class="font-body text-center mb-4" style="color: #F5F5F0;">
+            Sistema de 12 columnas Mobile First. Usa <code>.row</code> y <code>.col-*</code> para estructurar tu layout.
+        </p>
 
-      <!-- Contenedores -->
-      <h3 class="font-accent mb-3" style="color: #F5F5F0; font-size: 1.5rem;">Contenedores</h3>
-      <div class="row mb-4">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-dark"><div class="card-header">.container</div><div class="card-body">Ancho responsivo estándar, crece por breakpoints.</div></div>
+        <!-- Contenedores -->
+        <h3 class="font-accent mb-3" style="color: #F5F5F0; font-size: 1.5rem;">Contenedores</h3>
+        <div class="row mb-4">
+            <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-dark"><div class="card-header">.container</div><div class="card-body">Ancho responsivo estándar, crece por breakpoints.</div></div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-dark"><div class="card-header">.container-fluid</div><div class="card-body">Siempre 100% del ancho, sin límite.</div></div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-dark"><div class="card-header">.container-sm</div><div class="card-body">Contenedor estrecho, ideal para formularios.</div></div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+            <div class="card card-dark"><div class="card-header">.container-lg</div><div class="card-body">Contenedor amplio para layouts grandes.</div></div>
+            </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-dark"><div class="card-header">.container-fluid</div><div class="card-body">Siempre 100% del ancho, sin límite.</div></div>
+
+        <!-- Código contenedores -->
+        <div class="code-block mb-4" style="background-color: #1A1A1A; border-radius: 8px; padding: 16px; position: relative;">
+            <button class="copy-btn btn btn-solid btn-danger btn-sm" style="position: absolute; top: 8px; right: 8px;">📋 Copiar</button>
+            <code style="color: #F5F5F0; font-family: 'Courier New', monospace; font-size: 0.85rem; white-space: pre-wrap;">
+                &lt;!-- Contenedor estándar responsivo --&gt;
+                &lt;div class="container"&gt;...&lt;/div&gt;
+
+                &lt;!-- Contenedor 100% del ancho --&gt;
+                &lt;div class="container-fluid"&gt;...&lt;/div&gt;
+
+                &lt;!-- Contenedor estrecho --&gt;
+                &lt;div class="container-sm"&gt;...&lt;/div&gt;
+
+                &lt;!-- Contenedor amplio --&gt;
+                &lt;div class="container-lg"&gt;...&lt;/div&gt;</code>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-dark"><div class="card-header">.container-sm</div><div class="card-body">Contenedor estrecho, ideal para formularios.</div></div>
+        
+
+        <!-- Columnas -->
+        <h3 class="font-accent mb-3" style="color: #F5F5F0; font-size: 1.5rem;">Columnas</h3>
+        <p class="font-body mb-3" style="color: #F5F5F0;">El sistema genera clases <code>.col-1</code> a <code>.col-12</code>, <code>.col-md-*</code> y <code>.col-lg-*</code>.</p>
+
+        <!-- Vista previa columnas -->
+        <div class="row mb-3">
+            <div class="col-12"><div style="background: #C0392B; color: #F5F5F0; padding: 8px; text-align: center; border-radius: 4px;">.col-12</div></div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-dark"><div class="card-header">.container-lg</div><div class="card-body">Contenedor amplio para layouts grandes.</div></div>
-        </div>
-      </div>
-
-      <!-- Código contenedores -->
-      <div class="code-block mb-4" style="background-color: #1A1A1A; border-radius: 8px; padding: 16px; position: relative;">
-        <button class="copy-btn btn btn-solid btn-danger btn-sm" style="position: absolute; top: 8px; right: 8px;">📋 Copiar</button>
-        <code style="color: #F5F5F0; font-family: 'Courier New', monospace; font-size: 0.85rem; white-space: pre-wrap;">
-            &lt;!-- Contenedor estándar responsivo --&gt;
-            &lt;div class="container"&gt;...&lt;/div&gt;
-
-            &lt;!-- Contenedor 100% del ancho --&gt;
-            &lt;div class="container-fluid"&gt;...&lt;/div&gt;
-
-            &lt;!-- Contenedor estrecho --&gt;
-            &lt;div class="container-sm"&gt;...&lt;/div&gt;
-
-            &lt;!-- Contenedor amplio --&gt;
-            &lt;div class="container-lg"&gt;...&lt;/div&gt;</code>
-      </div>
-    
-
-      <!-- Columnas -->
-      <h3 class="font-accent mb-3" style="color: #F5F5F0; font-size: 1.5rem;">Columnas</h3>
-      <p class="font-body mb-3" style="color: #F5F5F0;">El sistema genera clases <code>.col-1</code> a <code>.col-12</code>, <code>.col-md-*</code> y <code>.col-lg-*</code>.</p>
-
-      <!-- Vista previa columnas -->
-      <div class="row mb-3">
-        <div class="col-12"><div style="background: #C0392B; color: #F5F5F0; padding: 8px; text-align: center; border-radius: 4px;">.col-12</div></div>
-    </div>
-
+    </section>
     <!-- ============================================
        BOTONES
   ============================================ -->
