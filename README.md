@@ -49,8 +49,8 @@ AngryBirds-FrameworkHDP es una librería CS básica y ligera que ofrece un siste
 Agrega el siguiente enlace dentro del `<head>` de tu HTML:
 
 ```html
-<link rel="stylesheet" href="https://yani-m22.github.io/AngryBirds-FrameworkHDP/css/style.css">
-<script src="https://yani-m22.github.io/AngryBirds-FrameworkHDP/js/navbar.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Yani-M22/AngryBirds-FrameworkHDP@v1.0.0/css/style.css">
+<script src="https://cdn.jsdelivr.net/gh/Yani-M22/AngryBirds-FrameworkHDP@v1.0.0/js/navbar.js"></script>
 ```
 
 ### Opción 2: Descarga directa
